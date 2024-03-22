@@ -1208,7 +1208,7 @@ sub run_stage_4 ($self) {
     # run upcp a second time as we had to run it before with CPANEL_BASE_INSTALL=1
     $self->run_once(
         upcp_second_run => sub {
-            $self->ssystem_and_die(qw{/usr/local/cpanel/scripts/upcp --sync});
+            $self->ssystem_and_die(qw{/usr/local/cpanel/scripts/upcp.static --sync});
         }
     );
 
